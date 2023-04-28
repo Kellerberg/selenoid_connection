@@ -1,4 +1,4 @@
-'''import allure
+import allure
 from selene import be, have
 
 
@@ -7,7 +7,7 @@ def test_search(setup_browser):
 
     browser = setup_browser
 
-    search = 'dogs'
+    search = 'cats'
 
     with allure.step('Open main page'):
         browser.open('https://www.europeana.eu/en')
@@ -17,17 +17,10 @@ def test_search(setup_browser):
         browser.element('[data-qa="search box"]').should(be.visible).type(search).press_enter()
     with allure.step('Checking results'):
         browser.element('[data-qa="search page"]').should(have.text(search))
+
+
+
 '''
-
-
-import allure
-from selene import have, by
-
-
-import allure
-from selene import have, by
-
-
 @allure.title("Successful fill form")
 def test_successful(setup_browser):
     browser = setup_browser
@@ -65,3 +58,4 @@ def test_successful(setup_browser):
         browser.element("#example-modal-sizes-title-lg").should(have.text("Thanks for submitting the form"))
         # browser.element(".table-responsive").should(
         #     have.texts(first_name, last_name, "alex@egorov.com", "Some street 1"))
+        '''
